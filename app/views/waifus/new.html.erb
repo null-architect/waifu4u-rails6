@@ -1,0 +1,27 @@
+<%= form_with scope: :waifu, url: waifus_path, local: true do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :anime %><br>
+    <%= form.text_field :anime %>
+  </p>
+
+  <p>
+    <%= form.label :image_url %><br>
+    <%= form.text_field :image_url %>
+  </p>
+
+  <p>
+    <%= form.file_field :image %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+
+<%= link_to 'Back', waifus_path %>

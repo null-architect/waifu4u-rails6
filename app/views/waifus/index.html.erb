@@ -1,0 +1,22 @@
+<h1>Listing waifus</h1>
+
+<%= link_to 'New waifu', new_waifu_path %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Anime</th>
+    <th>Image_url</th>
+    <th></th>
+  </tr>
+
+  <% @waifus.each do |waifu| %>
+    <tr>
+      <td><%= waifu.name %></td>
+      <td><%= waifu.anime %></td>
+      <td><%= waifu.image_url %></td>
+      <td><%= link_to 'Show', waifu_path(waifu) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<button type="button" class="btn btn-primary">Primary</button>

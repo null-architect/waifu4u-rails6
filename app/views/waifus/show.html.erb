@@ -1,0 +1,29 @@
+<p>
+  <strong>Name:</strong>
+  <%= @waifu.name %>
+</p>
+
+<p>
+  <strong>Anime:</strong>
+  <%= @waifu.anime %>
+</p>
+
+<p>
+  <strong>Image_url:</strong>
+  <%= @waifu.image_url %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @waifu.image %>
+</p>
+
+
+
+<img src="<%= @waifu.image_url %>">
+
+<%= image_tag @waifu.image %>
+
+<%= link_to 'Back', waifus_path %>
+
+
