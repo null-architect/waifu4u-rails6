@@ -1,0 +1,9 @@
+<%= form_with(model: [ @waifu, @waifu.ratings.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :waifu_rating %><br>
+    <%= form.text_field :waifu_rating %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

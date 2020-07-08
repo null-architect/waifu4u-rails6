@@ -9,21 +9,26 @@
 </p>
 
 <p>
-  <strong>Image_url:</strong>
-  <%= @waifu.image_url %>
-</p>
-
-<p>
   <strong>Image:</strong>
   <%= @waifu.image %>
 </p>
 
-
-
-<img src="<%= @waifu.image_url %>">
-
 <%= image_tag @waifu.image %>
 
+<br>
+
+<h2>Ratings</h2>
+<%= render @waifu.ratings %>
+
+<h2>Add a rating:</h2>
+<%= render 'ratings/form' %>
+
+
+<br>
+
+
+
+<%= link_to 'Edit', edit_waifu_path(@waifu) %> |
 <%= link_to 'Back', waifus_path %>
 
 

@@ -13,8 +13,11 @@
     <tr>
       <td><%= waifu.name %></td>
       <td><%= waifu.anime %></td>
-      <td><%= waifu.image_url %></td>
       <td><%= link_to 'Show', waifu_path(waifu) %></td>
+      <td><%= link_to 'Edit', edit_waifu_path(waifu) %></td>
+      <td><%= link_to 'Destroy', waifu_path(waifu),
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>
